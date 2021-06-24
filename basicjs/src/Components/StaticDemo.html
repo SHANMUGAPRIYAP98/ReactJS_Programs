@@ -1,0 +1,22 @@
+<html>
+    <head><title>Static Class</title>
+        <script type="text/javascript">
+        class VerifyData
+        {
+            static checkString(value1,value2)
+            {
+               if(value1.indexOf(value2)>=0)
+               {
+                   console.log(value2+" string is contained in "+value1);
+               }
+               else{
+                console.log(value2+" string is not contained in "+value1);
+               }
+            }
+        }
+        data=prompt("Enter the String : ")
+        find=prompt("Enter the String to be searched : ")
+        VerifyData.checkString(data,find)
+        </script>
+    </head>
+</html>

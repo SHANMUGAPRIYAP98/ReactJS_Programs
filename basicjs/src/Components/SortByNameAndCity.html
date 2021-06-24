@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        const cust=[{cid:1,cname:"kavitha",city:"kolkata"},{cid:2,cname:"ziya",city:"canada"},{cid:1,cname:"aparna",city:"chennai"},
+        {cid:1,cname:"kavitha",city:"america"},{cid:1,cname:"bhavani",city:"america"}]
+        cust.sort(function(val1,val2)
+        {
+            let n1=val1.cname.toLocaleLowerCase();
+            let n2=val2.cname.toLocaleLowerCase();
+            let c1=val1.city.toLocaleLowerCase()
+            let c2=val2.city.toLocaleLowerCase()
+            if(n1==n2)
+            {
+               return c1.localeCompare(c2)
+            }
+            else if(n1>n2)
+            {
+                return 1;
+            }
+            else{
+                return -1;
+            }
+        }
+        ).map((data)=>{
+            console.log(data)
+        })
+ 
+        </script>
+    </head>
+</html>

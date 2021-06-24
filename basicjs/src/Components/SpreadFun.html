@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Spread Operator with Function</title>
+        <script type="text/javascript">
+        var data=0;
+        function calcSum(a,b,...c)
+        {
+            let val1=a;
+            let val2=b;
+            let val3=c;
+            val3.map(x=>{
+                this.data=this.data+x;
+                console.log(data)
+            }).map(x=>
+            {
+                x=this.data+val1+val2;
+                console.log("Sum of Digits : "+x)
+            })
+        }
+        let a=10
+        let b=20;
+        let c=[5,10,15,20,25]
+        calcSum(a,b,...c)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

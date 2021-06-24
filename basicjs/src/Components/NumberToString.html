@@ -1,0 +1,28 @@
+<html>
+    <head><title>Conversion of Number To String</title>
+    <script type="text/javascript">
+    function numberToString()
+    {
+      let a=100;
+      document.write(`Value of a : ${a}`+"<br>")
+      document.write(`DataType of a : ${typeof(a)}`+"<br>")
+      let b=a+"";
+      document.write(`Value of a : ${b}`+"<br>")
+      document.write(`DataType of a : ${typeof(b)}`+"<br>")
+    }
+    function stringToNumber()
+    {
+      let a="100";
+      document.write(`Value of a : ${a}`+"<br>")
+      document.write(`DataType of a : ${typeof(a)}`+"<br>")
+      let b=parseInt(a);
+      document.write(`Value of a : ${b}`+"<br>")
+      document.write(`DataType of a : ${typeof(b)}`+"<br>")
+    }
+    </script>
+    </head>
+    <body>
+            <input type="submit" onclick="numberToString()" value="Convert Number To String">
+            <input type="submit" onclick="stringToNumber()" value="Convert String To Number">
+    </body>
+</html>

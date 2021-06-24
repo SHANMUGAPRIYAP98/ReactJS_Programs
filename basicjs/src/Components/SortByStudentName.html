@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>Sort By Student Name</title>
+    <script type="text/javascript">
+        class Student {
+            marks = []
+            constructor(id, name, address, city, marks) {
+                this.id = id;
+                this.name = name;
+                this.address = address;
+                this.city = city;
+                this.marks = marks;
+            }
+        }
+        let n = prompt("Enter the no.of.elements : ");
+        let studOb = []
+        let marks = []
+        let resmarks=[]
+        for (let i = 0; i < n; i++) {
+            name = prompt("Enter the Name : ")
+            address = prompt("Enter the Address : ")
+            city = prompt("Enter the City : ")
+            for (let j = 0; j < 3; j++) {
+                marks[j] = parseInt(prompt("Enter the Mark" + (j + 1)))
+                resmarks.push(marks[j])
+            }
+            studOb[i] = new Student(i + 1, name, address, city,resmarks );
+            resmarks=[]
+        }
+        console.log(studOb)
+        
+        let newStudOb=[]
+        function addMarks()
+        {
+            for(let i=0;i<studOb.length;i++)
+            {
+                for(let j=0;j<3;j++)
+                {
+                    studOb[i].marks[j]+20;
+                    
+                }
+                console.log(studOb)
+            }
+        }
+        for(let i=0;i<3;i++)
+        {
+        let op = prompt("Enter the Option")
+        let op1 = parseInt(op)
+        switch (op1) {
+            case 1: studOb.sort(function (val1, val2) {
+                let name1 = val1.name.toLowerCase();
+                let name2 = val2.name.toLowerCase();
+                if (name1 > name2) {
+                    return 1;
+                }
+                else if (name1 < name2) {
+                    return -1;
+                }
+                else {
+                    return 0;
+                }
+            }).map(data => {
+                console.log(data)
+            })
+                break;
+                case 2:for(let i=0;i<studOb.length;i++)
+                {
+                    if(studOb[i].city.toLowerCase()!="chennai" && studOb[i].city.toLowerCase()!="bangalore")
+                    {
+                       studOb.splice(i);
+                    }
+                }
+                console.log("Removing Students Apart From Chennai and Bangalore")
+                console.log(studOb)
+                break;
+                case 3:addMarks();
+                break;
+        }
+       
+    }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

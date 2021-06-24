@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Comparison Operator</title>
+    <script>
+        function compareOperator() {
+            let data1 = document.getElementById('val1').value;
+            let data2 = document.getElementById('val2').value;
+            let newData1 = parseInt(data1);
+            let newData2 = parseInt(data2);
+            if (newData1 == newData2) {
+                document.write(`Data 1 : ${newData1}` + "<br>")
+                document.write(`Data 2 : ${newData2}` + "<br>")
+                document.write("Both the Values are Equal" + "<br>")
+                if (newData1 === newData2) {
+                    document.write(`DataType of Data 1 : ${typeof(newData1)}` + "<br>")
+                    document.write(`DataType of Data 2 : ${typeof(newData1)}` + "<br>")
+                    document.write("Both the Values and DataType are Equal" + "<br>")
+                }
+            }
+            else {
+                document.write(`Data 1 : ${newData1}` + "<br>")
+                document.write(`Data 2 : ${newData2}` + "<br>")
+                document.write("Both the Values are not Equal" + "<br>")
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Enter the Value 1 :<input type="text" id="val1"></p><br />
+    <p>Enter the Value 2 :<input type="text" id="val2"></p><br />
+    <p></p><input type="submit" value="compare == and ===" onclick="compareOperator()"><br />
+</body>
+</html>

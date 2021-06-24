@@ -1,0 +1,36 @@
+<html>
+    <head><title>Destructing Feature</title></head>
+    <script type="text/javascript">
+    let courses=["java","python","machine learning","asp.net","block chain"]
+    let favsub=courses[0]
+    console.log("Favourite Subject : "+favsub)
+    let [sub1,sub2]=courses
+    console.log("Subject 1 : "+sub1)
+    console.log("Subject 2 : "+sub2)
+    let bankAcc=[favsub,sub1,sub2,
+        [{cid:1,customerName:"parthiban",accno:12345678901234,mobile:9842123456},
+        {cid:2,customerName:"rani",accno:12345678912345,mobile:9842123908},
+        {cid:3,customerName:"sandhya",accno:1234555901234,mobile:9840123456}  ]  
+    ]
+    let[val1,,,...val4]=bankAcc
+    console.log(val4)
+    let ob=bankAcc[3]
+    console.log(ob)
+    custAccount={cid:1,customerName:"parthiban",accno:12345678901234,mobile:9842123456};
+    custAccount.mobile=9841215309;
+    mobileNo=custAccount.mobile
+    console.log(mobileNo)
+    function displayFruits()
+    {
+        return ["kiwi","mangosteen","starfruit","butter fruit","rambutan"]
+    }
+    let first=displayFruits()[0];
+    let second=displayFruits()[1];
+    let [firstFruit,secondFruit]=[second,first]
+    console.log("Fruit 1 : "+firstFruit)
+    console.log("Fruit 2 : "+secondFruit)
+    let thirdFruit=displayFruits()[3]
+    console.log("Fruit 3 : "+thirdFruit)
+    </script>
+    <body></body>
+</html>

@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="D:\\ReactJS_Programs\\basicjs\\src\\Components\\Calc.css">
+    <script type="text/javascript">
+        var val = 0;
+        var res = 0;
+        var output = 0;
+        function onClick1() {
+            val = document.getElementById('num1').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClick2() {
+            val = document.getElementById('num2').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClick3() {
+            val = document.getElementById('num3').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClick4() {
+            val = document.getElementById('num4').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClick5() {
+            val = document.getElementById('num5').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClick6() {
+            val = document.getElementById('num6').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClick7() {
+            val = document.getElementById('num7').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClick8() {
+            val = document.getElementById('num8').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClick9() {
+            val = document.getElementById('num9').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClick0() {
+            val = document.getElementById('num0').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClickAdd() {
+            val = document.getElementById('add').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClickSub() {
+            val = document.getElementById('sub').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClickMul() {
+            val = document.getElementById('mul').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onClickDiv() {
+            val = document.getElementById('div').value;
+            document.getElementById('text').value += val;
+
+        }
+        function onEquals() {
+            var operator = document.getElementById('text').value;
+            if (operator) {
+                document.getElementById('text').value = eval(operator)
+            }
+        }
+            function clearData() {
+                document.getElementById('text').value = " ";
+            }
+            function onClickSquare()
+            {
+                val=document.getElementById('text').value;
+                let newval=parseInt(val);
+                document.getElementById('text').value=Math.pow(newval,2);
+            }
+            function onClickCube()
+            {
+                val=document.getElementById('text').value;
+                let newval=parseInt(val);
+                document.getElementById('text').value=Math.pow(newval,3);
+            }
+            function onClickSqrt()
+            {
+                val=document.getElementById('text').value;
+                let newval=parseInt(val);
+                document.getElementById('text').value=Math.sqrt(newval);
+            }
+            function onClickCbrt()
+            {
+                val=document.getElementById('text').value;
+                let newval=parseInt(val);
+                document.getElementById('text').value=Math.cbrt(newval);
+            }
+    </script>
+</head>
+
+<body>
+    <h2 align="center">Calculator</h2>
+    <div id="div1">
+        <input type="text" id="text"><br>
+        <hr>
+        <input type="submit" id="num7" value="7" onclick="onClick7()" class="btnval">&nbsp;
+        <input type="submit" id="num8" value="8" onclick="onClick8()" class="btnval">&nbsp;
+        <input type="submit" id="num9" value="9" onclick="onClick9()" class="btnval">&nbsp;
+        <input type="submit" id="mul" value="*" onclick="onClickMul()" class="btnval"><br>
+        <hr>
+        <input type="submit" id="num4" value="4" onclick="onClick4()" class="btnval">&nbsp;
+        <input type="submit" id="num5" value="5" onclick="onClick5()" class="btnval">&nbsp;
+        <input type="submit" id="num6" value="6" onclick="onClick6()" class="btnval">&nbsp;
+        <input type="submit" id="sub" value="-" onclick="onClickSub()" class="btnval"><br>
+        <hr>
+        <input type="submit" id="num3" value="3" onclick="onClick3()" class="btnval">&nbsp;
+        <input type="submit" id="num2" value="2" onclick="onClick2()"  class="btnval">&nbsp;
+        <input type="submit" id="num1" value="1" onclick="onClick1()" class="btnval">&nbsp;
+        <input type="submit" id="add" value="+" onclick="onClickAdd()" class="btnval">&nbsp;
+        <hr>
+        <input type="submit" id="num0" value="0" onclick="onClick0()" class="btnval">&nbsp;
+        <input type="submit" id="div" value="/" onclick="onClickDiv()" class="btnval">&nbsp;
+        <input type="submit" id="clear" value="C" onclick="clearData()" class="btnval">&nbsp;
+        <input type="submit" id="equals" value="=" onclick="onEquals()" class="btnval">&nbsp;
+        <hr>
+        <input type="submit" id="num0" value="sq" onclick="onClickSquare()" class="btnval">&nbsp;
+        <input type="submit" id="div" value="cu" onclick="onClickCube()" class="btnval">&nbsp;
+        <input type="submit" id="clear" value="sqrt" onclick="onClickSqrt()" class="btnval">&nbsp;
+        <input type="submit" id="equals" value="cbrt" onclick="onClickCbrt()" class="btnval">&nbsp;
+    </div>
+</body>
+
+</html>

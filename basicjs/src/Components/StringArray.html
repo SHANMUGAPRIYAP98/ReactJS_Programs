@@ -1,0 +1,32 @@
+<html>
+    <head><title>String Array</title></head>
+    <body>
+        <script type="text/javascript">
+        let n=prompt("Enter the No.of.Elements : ");
+        let len=parseInt(n)
+        let arr=[]
+        for(let i=0;i<len;i++)
+        {
+            let values=prompt("Enter the Values : ");
+            arr.push(values)
+        }
+        for(let i=0;i<arr.length;i++)
+        {
+            if(i%2==0)
+            {
+                arr[i]=`Er.${arr[i]}`
+                document.write(`Element ${i+1} : ${arr[i]}`+"<br>")
+            }
+            else
+            {
+                arr[i]=`Dr.${arr[i]}`
+            }
+            if(arr[i].startsWith('Dr.'))
+            {
+                document.write(`Element ${i+1} : ${arr[i]} San`+"<br>")
+            }
+        }
+        document.write(arr)
+        </script>
+    </body>  
+</html>

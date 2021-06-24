@@ -1,0 +1,22 @@
+<html>
+    <head><title>VarLet</title>
+        <script type="text/javascript">
+        var val=10;
+        function varLetUsage()
+        {
+            var val2=20;
+            let val1=100;
+            document.write(`Value of Global Var Keyword : ${val}`+"<br>")
+            document.write(`Value of Function Var Keyword : ${val2}`+"<br>")
+            document.write(`Value of Function Let Keyword : ${val1}`+"<br>")
+        }
+       document.write(`Value of Global Var Keyword : ${val}`+"<br>")
+       //document.write(`Value of Function Let Keyword : ${val1}`) //val1 is not defined
+      // document.write(`Value of Function Let Keyword : ${val2}`) //val2 is not defined
+      let val2=50
+      document.write(`Value of Outside Let Keyword : ${val2}`+"<br>")
+        </script></head>
+    <body>
+      <input type="submit" value="var let" onclick="varLetUsage()">
+    </body>
+</html>

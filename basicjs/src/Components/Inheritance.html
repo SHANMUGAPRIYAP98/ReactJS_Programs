@@ -1,0 +1,88 @@
+<html>
+    <head><script type="text/javascript">
+class BankAccount
+{
+
+    constructor(custid,bankname,branchname,city,pincode,type,accountno)
+    {
+        this.custid=custid;
+        this.bankname=bankname;
+        this.branchname=branchname;
+        this.city=city;
+        this.pincode=pincode;
+        this.type=type;
+        this.accountno=accountno;
+    }
+    Balance=prompt("Enter the Balance : ");
+    bal=parseFloat(this.Balance)
+   
+    deposit()
+    {
+        
+        let depAmt=prompt(parseFloat("Enter the Amount to be Deposited : "));
+        let dep=parseFloat(depAmt)
+        this.Balance=this.bal+dep;
+        console.log(this.Balance)
+    }
+    withdraw()
+    {
+        let withAmt=prompt("Enter the Amount to be Withdrawn : ");
+        let withdraw=parseFloat(withAmt)
+        if(this.Balance>=0&&this.Balance<=500)
+        {
+            console.log("Low Balance")
+        }
+        else if(this.Balance<this.withAmt)
+        {
+            console.log("Insufficient Balance/Withdrawl Amount is greater then Balance")
+        }
+        else{
+            this.Balance=this.bal-withdraw;
+        }
+    }
+    balanceInquiry()
+    {
+        console.log(this.custid+" Balance is "+this.Balance);
+    }
+}
+class Customer extends BankAccount
+{
+    constructor(custid,bankname,branchname,city,pincode,type,accountno,custname,phoneno)
+    {
+        super(custid,bankname,branchname,city,pincode,type,accountno);
+        this.custname=custname;
+        this.phoneno=phoneno;
+    }
+    displayDetails()
+    {
+        console.log("Customer Name : "+this.custname);
+        console.log("Customer Id : "+this.custid)
+        console.log("Bank Name : "+this.bankname);
+        console.log("Branch Name : "+this.branchname)
+        console.log("City : "+this.city);
+        console.log("Pincode : "+this.pincode);
+        console.log("Account Type :  "+this.type);
+        console.log("Balance : "+this.Balance)
+        console.log("Account Number :  "+this.accountno);
+        console.log("Phone Number :  "+this.phoneno);
+    }
+}
+let bankAcc=new Customer(12345,"ICICI","Madhavaram","Chennai",600118,"Current",213456789012,"Diyashri",9012345678);
+bankAcc.balanceInquiry();
+let opt=prompt("Do you want to deposit/withdraw");
+if(opt.toLowerCase()=="deposit")
+{
+    bankAcc.deposit()
+    bankAcc.displayDetails()
+}
+else if(opt.toLowerCase()=="withdraw")
+{
+    bankAcc.withdraw();
+    bankAcc.displayDetails()
+}
+else
+{
+    console.log("Invalid Option")
+}
+</script>
+</head></html>

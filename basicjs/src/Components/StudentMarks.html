@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Student Marks</title>
+</head>
+<script>
+    class Students {
+
+        constructor(id, name, address, city, pin, marks) {
+            this.id = id;
+            this.name = name;
+            this.address = address;
+            this.city = city;
+            this.pin = pin;
+            this.marks = marks;
+        }
+        getData() {
+            let n = prompt("Enter the Number of Elements : ")
+            let no = parseInt(n)
+            let mrks = 0;
+            let arrm = []
+            let stud = []
+            let marks = []
+            for (var i = 0; i < no; i++) {
+                let name = prompt("Enter the Name : ")
+                let addr = prompt("Enter the Address : ")
+                let city = prompt("Enter the City ")
+                let pincode = prompt("Enter the Pincode : ")
+                let pin = parseInt(pincode)
+                for (var j = 0; j < 3; j++) {
+                    marks[j] = prompt("Enter the Mark" + (j + 1))
+                    mrks = parseInt(marks[j])
+                    arrm.push(mrks)
+                }
+                stud[i] = new Students(i + 1, name, addr, city, pin, arrm);
+                arrm = []
+            }
+            console.log(stud)
+            let search=prompt("Enter the Search Value")
+            stud.filter((x)=>
+            {
+                if(x.name==search||x.address==search||x.city==search)
+                {
+                    console.log("Search Found In Following Records")
+                    console.log(x)
+                }
+                else
+                {
+                    console.log("No value Found")
+                }
+            })
+        }
+    }
+    let s = new Students()
+    s.getData()
+
+</script>
+
+</html>
