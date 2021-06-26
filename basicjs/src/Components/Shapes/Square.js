@@ -1,4 +1,4 @@
-export class square
+export class Square
 {
     constructor(side)
     {

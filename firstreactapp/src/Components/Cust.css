@@ -1,0 +1,15 @@
+table{
+    border:1px solid black;
+    width:600px;
+    height:250px;
+    background-color: aquamarine;
+    margin-top: 100px;
+    margin-left: 450px;
+    font-family: 'Times New Roman';
+    color: darkblue;
+}
+h1{
+    font-family: 'Times New Roman';
+    text-align: center;
+    color:crimson;
+}

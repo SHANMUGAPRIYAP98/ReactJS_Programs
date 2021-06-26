@@ -1,4 +1,4 @@
-import { circle,radius } from "./Shapes.js";
+import { circle,radius } from "./Shapes";
 class Circle
 {
     print()
