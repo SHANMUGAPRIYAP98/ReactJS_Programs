@@ -1,0 +1,60 @@
+  let studDetails=[{sid:1,sname:"aaaa",marks:[50,60,70]},
+    {sid:2,sname:"bbbb",marks:[80,90,78]},
+    {sid:3,sname:"cccc",marks:[20,30,40]},
+    {sid:4,sname:"dddd",marks:[38,50,50]},
+    {sid:5,sname:"eeee",marks:[76,72,75]},
+]
+let rdata=[],pdata=[],studTable;
+let r1,p1;
+let stud=new Map();
+studDetails.map((x)=>
+{
+    stud.set(x.sid,x);
+    x.marks.map((mark)=>
+    {
+        if(mark<40)
+        {
+            r1=stud.get(x.sid);
+        }
+        
+    })
+    rdata.push(r1)
+   
+})
+console.log(rdata)
+
+// let studTable;
+// studDetails.map((data)=>{
+//   data.marks.map((x)=>{
+//       if(x<40)
+//       {
+//         
+//         studTable=data;
+//         console.log(studTable)
+//       }
+//     //   else
+//     //   {
+//     //       studTable =<table><th>SID</th><th>SNAME</th><th>MARK 1</th><th>MARK 2</th><th>MARK 3</th>
+//     //       <tr id="p"><td>{data.sid}</td><td>{data.sname}</td><td>{data.marks}</td></tr>
+//     //        </table>
+//     //   }
+//   })
+// })
+
+
+
+    // let con=false;
+    // let d=new Date();
+    // let data="";
+    // if(con)
+    // {
+    //     data=<div id="con">Flight Ticket Confirmed.{d.toString()}</div>
+    // }
+    // else
+    // {
+    //     data=<div id="con">Flight Ticket Cancelled for {d.toString()}</div>
+    // }
+
+     <div>
+             {studTable}
+           </div>

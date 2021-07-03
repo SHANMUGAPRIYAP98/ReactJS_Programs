@@ -1,0 +1,50 @@
+div
+{
+    background-color: white;
+    color:brown;
+}
+#t1
+{
+    border:1px solid black;
+}
+tr th{
+    border:1px solid black;
+    width: 100px;
+    text-align: center;
+    color: crimson;
+}
+#head
+{
+    text-align: center;
+    color:chocolate;
+    background-color:lightsalmon;
+    font-family: 'Trebuchet MS';
+}
+.imag
+{
+    width:100px;
+    height:50px;
+}
+#stud
+{
+    background-color: greenyellow;
+}
+h2{
+    text-align: center;
+    color: blueviolet;
+}
+#tdata td
+{
+    color: darkgreen;
+    text-align: center;
+    border: 1px solid black;
+}
+tr td{
+    
+}
+.error
+{
+    color: red;
+    font-family: Verdana;
+    font-size: 12px;
+}

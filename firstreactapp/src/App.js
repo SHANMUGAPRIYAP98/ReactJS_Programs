@@ -1,5 +1,7 @@
 import React from 'react';
 import CustFunc from './Components/CustFunc';
+import CustClass from './Components/CustClass';
+import NameForm from './Components/NameForm';
 function App() {
   let title="Customer General Details"
   let custDetails=[{cid:101,cname:"diyashri",aadhar:"897112345678",pancard:"BNMNJ1234J",city:"mumbai"},
@@ -16,10 +18,10 @@ function App() {
     }
   }
   )
-  return (
+ return (
    <div>
      <CustFunc  value1={custDetails} value2={title}/>
-     
+     <CustClass />
    </div>
    //React.createElement("div",{},React.createElement("h1",{},"Welcome to RSC Training Program"+date.toString()),React.createElement("h2",{className:'header'},"React JS By  Facebook Community"),React.createElement("li",{},""))
   );
