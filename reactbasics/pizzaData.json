@@ -1,0 +1,38 @@
+{
+  "crustType": [
+    {
+      "id": 1,
+      "type": "Cheese Burst"
+    },
+    {
+      "id": 2,
+      "type": "Classic Hand Tossed"
+    },
+    {
+      "id": 3,
+      "type": "Wheat Thin Crust"
+    },
+    {
+      "id": 4,
+      "type": "Fresh Pan Pizza"
+    },
+    {
+      "id": 5,
+      "type": "New Hand Tossed"
+    }
+  ],
+  "Payment": [
+    {
+      "id": 1,
+      "mode": "Cash on Delivery"
+    },
+    {
+      "id": 2,
+      "mode": "Credit Card"
+    },
+    {
+      "id": 3,
+      "mode": "Debit Card"
+    }
+  ]
+}

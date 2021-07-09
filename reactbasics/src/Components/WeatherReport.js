@@ -123,7 +123,7 @@ export default function WeatherReport() {
         <div>
             <h1 id="head">WEATHER DATA REPORT SHEET</h1>
             <table>
-                <tbody><tr><td>Enter the City</td><td><input type="text" name="cityName" id="city" value={city.cityName} onChange={onChangeText} /></td><td>
+                <tbody id="searchBox"><tr ><td>Enter the City</td><td><input type="text" name="cityName" id="city" value={city.cityName} onChange={onChangeText} /></td><td>
                     <input type="submit" onClick={onSearchCity} value="Search Data" /></td></tr></tbody>
             </table>
             <table id="t1">

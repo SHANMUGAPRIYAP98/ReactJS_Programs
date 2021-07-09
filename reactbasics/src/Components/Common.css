@@ -25,6 +25,11 @@ tr th{
     width:100px;
     height:50px;
 }
+#searchBox
+{
+    margin-left: 500px;
+    margin-top: 200px;
+}
 #stud
 {
     background-color: greenyellow;
@@ -47,4 +52,19 @@ tr td{
     color: red;
     font-family: Verdana;
     font-size: 12px;
+}
+#pizza
+{
+    color:aquamarine;
+    font-family: 'Times New Roman';
+}
+#img1
+{
+    width: 1500px;
+    height: 750px;
+}
+#f1
+{
+    margin-top: -700px;
+    margin-left: 600px;
 }

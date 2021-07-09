@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import StudentView from './StudentView'
 export default function StudentData() {
-    var pstud=[],cstud=[];
     const [stud,setStud]=useState({
         regno:'',
         sname:'',
@@ -10,11 +9,18 @@ export default function StudentData() {
         phone:'',
         addr:'',
         bg:'Select Blood Group',
-        deg:''
+        deg:'',
+        lang:[]
+      })
+      const [studView,setStudView]=useState({
       })
      const onTextChange= (event)=>
       {
        const {name,value}=event.target;
+       if(event.target.checked)
+       {
+        //   stud.lang.push(value)
+       }
         setStud((prevState)=>{
             return{
                 ...prevState,
@@ -22,11 +28,16 @@ export default function StudentData() {
             }
             
         })
+        
       }
       const onSubmit=()=>
       {
+        setStudView(stud);
+
         console.log("Student Record")
         console.log(stud)
+        console.log(typeof(stud.lang))
+        console.log(stud.lang)
       }
     return (
         <div>
@@ -50,15 +61,20 @@ export default function StudentData() {
                             <option value="A+ve">A+ve</option>
                             <option value="A-ve">A-ve</option>
                         </select></tr>
+                        <tr><td>Subjects : </td><td>
+                            <input type="checkbox" name="lang" value="AI" onChange={onTextChange}/>AI</td><td><input type="checkbox" name="lang" value="ML" onChange={onTextChange}/>ML
+                            </td><td><input type="checkbox" name="lang" value="PYTHON" onChange={onTextChange}/>PYTHON</td></tr>
                         <tr><td>Degree : </td><td><input type="radio" name="deg" value="UG" onChange={onTextChange}/>UG</td><td><input type="radio" name="deg" value="PG" onChange={onTextChange}/>PG</td></tr>
                       <tr><td colSpan="2"><input type="submit" value="Submit Data" onClick={onSubmit}/></td></tr>
                     </table>
                 </fieldset>
             </section>
             <div>
-            <StudentView data={stud}/>
-            </div>
-            
+            { studView && <StudentView data={studView}/>}
+            </div>hello
+            {
+                stud.regno
+            }
         </div>
     )
 }

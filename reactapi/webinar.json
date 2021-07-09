@@ -1,0 +1,87 @@
+{
+  "WebinarData": [
+    {
+      "eid": "A2901",
+      "fname": "diyashri",
+      "lname": "nagaraj",
+      "mail": "diy@gmail.com",
+      "addr": "m.r.nagar",
+      "zip": "600118",
+      "states": "TamilNadu",
+      "phone": "1233333333",
+      "dept": "Finance",
+      "org": "infosys",
+      "id": 1
+    },
+    {
+      "eid": "A1232",
+      "fname": "sandhya",
+      "lname": "parthiban",
+      "mail": "abc@outlook.com",
+      "addr": "kodungaiyur",
+      "zip": "600118",
+      "statesIN": "TamilNadu",
+      "phone": "9840425389",
+      "dept": "HR",
+      "org": "cts",
+      "id": 2
+    }
+  ],
+  "States": [
+    {
+      "id": 1,
+      "name": "TamilNadu",
+      "cities": [
+        "Chennai",
+        "Coimbatore",
+        "Madurai",
+        "Salem",
+        "Tiruppur"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Kerala",
+      "cities": [
+        "Kochi",
+        "Kozhikode",
+        "Palakkad",
+        "Kottayam",
+        "Munnar"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Andhra Pradesh",
+      "cities": [
+        "Tirupati",
+        "Vijayawada",
+        "Vizag",
+        "Hyderabad",
+        "Kurnool"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Karnataka",
+      "cities": [
+        "Bangalore",
+        "Mysore",
+        "Vijayapura",
+        "Gulbarga",
+        "Hubli"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Gujarat",
+      "cities": [
+        "Ahmedabad",
+        "Surat",
+        "Rajkot",
+        "Bhavnagar",
+        "Vadodara"
+      ]
+    }
+  ]
+}
