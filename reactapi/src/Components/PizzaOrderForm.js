@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import design from './Design.css'
+import pizza1 from './pizza1.jpg'
 export default function PizzaOrderForm() {
     const toppings = ["Paneer", "Mushroom", "Onion", "Capsicum", "Tomato"];
     const [data, setData] = useState({
@@ -117,12 +118,14 @@ export default function PizzaOrderForm() {
             {
                 console.log("I always execute irrespective of success call or failure call")
             })
+            alert("Your Order Placed Successfully for "+data.oid);
     }
     return (
         <div>
-            <fieldset>
+            <img src={pizza1} />
+            <fieldset id="f1">
                 <legend>Pizza Order Form</legend>
-                <table>
+                <table id="t1">
                     <tbody>
                         <tr><td>Order Id : </td><td><input type="text" name="oid" value={data.oid} onChange={OnTextChange}/></td></tr>
                         <tr><td>Customer Name : </td><td><input type="text" name="cname" value={data.cname} onChange={OnTextChange} /></td></tr>

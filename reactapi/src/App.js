@@ -4,6 +4,7 @@ import PizzaOrderForm from './Components/PizzaOrderForm';
 import WebinarFormData from './Components/WebinarFormData';
 import { Component } from 'react';
 import WebinarFormAPI from './Components/WebinarFormAPI';
+import PizzaViewData from './Components/PizzaViewData'
 
 export default class App extends Component {
   onReadData(data)
@@ -20,6 +21,7 @@ render()
   return (
     <div className="App">
     {/* <PizzaOrderForm /> */}
+    {/* <PizzaViewData /> */}
     {/* {
       display
     } */}

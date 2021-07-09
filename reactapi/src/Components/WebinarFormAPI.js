@@ -31,21 +31,34 @@ export default function WebinarFormAPI() {
             setState(data)
         })
     }, [])
-    if (data.statesIN === "TamilNadu") {
+    var disCities,dis;
+    var arr=[]
+    if (data.statesIN ==="TamilNadu") {
         disCities = <div><select name="cities"><option value="0">Select City</option>
             {
                 states.filter((d) => {
                     if (d.name === "TamilNadu") {
                         d.cities.map((x) => {
-                            console.log(x)
-                        })
-                    }
-
-                })
-            }
+                        //    arr.push(x);
+                        console.log(x)
+                      
+                  })
+                //   console.log(arr)
+                //   arr.map((x)=>{
+                //     dis=<select>
+                //         <option value="0">Select City</option>
+                //         {
+                //             <option value={x}>{x}</option>
+                //         }
+                //     </select>
+                //   })
+                }
+            })
+        }
+            
         </select></div>
     }
-    else if (data.states === "Kerala") {
+    else if (data.statesIN === "Kerala") {
         disCities = <div><select name="cities"><option value="0">Select City</option>
             {
                 states.filter((d) => {
@@ -62,7 +75,7 @@ export default function WebinarFormAPI() {
             }
         </select></div>
     }
-    else if (data.states === "Gujarat") {
+    else if (data.statesIN === "Gujarat") {
         disCities = <div><select name="cities"><option value="0">Select City</option>
             {
                 states.filter((d) => {
@@ -120,12 +133,48 @@ export default function WebinarFormAPI() {
             "name":"shanmuga priya",
             "id":"A2939"
         }
-        axios.post(dbUrl,data,{headers}).then(res=>res.data)
-        {
+        axios.post(dbUrl,data,{headers}).then(res=>res.data).then((data)=>{
+
             console.log("Form Submitted Successfully");
-            console.log(res)
+            console.log(data)
         }
+        )
     }
+    var display;
+    var [print,setPrint]=useState()
+    const fetchAll=()=>
+    {
+        axios.get(dbUrl).then(res=>res.data).then((dt)=>{
+            console.log(dt)
+            display=<table id="web">
+                <thead><tr><th>Employee Id</th><th>First Name</th><th>Last Name</th><th>Mail</th>
+                <th>Address</th><th>Zip Code</th><th>State</th><th>Phone</th><th>Department</th>
+                <th>Organisation</th></tr></thead>
+                {
+                    dt.map(data=>{
+                        return(
+                            <tbody><tr><td>{data.eid}</td><td>{data.fname}</td><td>{data.lname}</td><td>{data.mail}</td>
+                            <td>{data.addr}</td><td>{data.zip}</td><td>{data.statesIN}</td><td>{data.phone}</td><td>{data.dept}</td>
+                            <td>{data.org}</td></tr></tbody>
+                        )
+                    })
+                }
+               
+               </table>
+        })
+        setPrint(display)
+    }
+    var id=data.eid;
+    const onDataUpdate=($)=>
+    {
+        axios.put(`${dbUrl}/${id}`,data).then(res=>console.log(res))
+
+    }
+
+
+
+
+
     return (
         <div>
             <fieldset>
@@ -134,7 +183,7 @@ export default function WebinarFormAPI() {
                     <tr><td><input type="text" name="eid" value={data.eid} onChange={onDataChange} placeholder="Employee Id"/></td></tr>
                     <tr><td><input type="text" name="fname" value={data.fname} placeholder="First Name" onChange={onDataChange} /></td><td><input type="text" value={data.lname} name="lname" placeholder="Last Name" onChange={onDataChange} /></td></tr>
                     <tr><td><input type="email" name="mail" value={data.mail} placeholder="Email Address" onChange={onDataChange} /></td></tr>
-                    <tr><td><input type="text" name="addr" placeholder="Address" onChange={onDataChange} value={data.addr} /></td><td><input type="number" name="zip" placeholder="Zip Code" maxLength="6" onChange={onDataChange} value={data.zip} /></td></tr>
+                    <tr><td><input type="text" name="addr" placeholder="Address" onChange={onDataChange} value={data.addr} /></td><td><input type="text" name="zip" placeholder="Zip Code" maxLength="6" onChange={onDataChange} value={data.zip} /></td></tr>
                     <tr><td><select name="statesIN" onChange={onDataChange}>
                         <option value="0">Select State</option>
                         {
@@ -144,7 +193,7 @@ export default function WebinarFormAPI() {
                             })
                         }
                     </select></td><td></td></tr>
-                    <tr><td><input type="text" name="phone" value={data.phone} onChange={onDataChange} placeholder="Phone Number" /></td></tr>
+                    <tr><td><input type="text" name="phone" value={data.phone} onChange={onDataChange} placeholder="Phone Number" maxLength="10"/></td></tr>
                     <tr><td><select name="dept" onChange={onDataChange}>
                         <option value="0">Select Department</option>
                         {
@@ -156,10 +205,18 @@ export default function WebinarFormAPI() {
                         }
                     </select></td><td>{}</td></tr>
                     <tr><td><input type="text" name="org" placeholder="Organisation Name" value={data.org} onChange={onDataChange} /></td></tr>
-                    <tr><td><button type="submit" onClick={onDataSubmit} >Submit</button></td></tr>
-                </table>
-            </fieldset>
+                    <tr><td><button type="submit" onClick={onDataSubmit} >Submit</button></td>
+                    <td><button type="submit" onClick={fetchAll}>Fetch All</button></td>
+                    <td><button type="submit" onClick={onDataUpdate}>Update</button></td>
+                    
+                    </tr>
 
+                </table>
+            
+            </fieldset> hello
+         {
+             print
+         }
         </div>
     )
 }

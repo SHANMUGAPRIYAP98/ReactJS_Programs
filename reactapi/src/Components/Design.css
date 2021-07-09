@@ -1,0 +1,62 @@
+#f1
+{
+    margin-top: -600px;
+    margin-left: 750px;
+    color: aquamarine;
+}
+#t1
+{
+    color:aquamarine;
+    font-family: 'Segoe UI';
+}
+img
+{
+    width:1500px;
+    height:800px;
+}
+#piz
+{
+    border:1px solid black;
+    font-family: 'Courier New';
+    
+}
+#piz tr td
+{
+    border:1px solid black;
+    width:300px;
+    height:35px;
+}
+.col
+{
+    font-weight: bold;
+    color:darkmagenta;
+}
+.col1
+{
+    color:blue;
+    font-weight: bold;
+}
+#bill
+{
+   width:200px;
+   height:150px;
+   margin-top: -450px;
+   margin-left: 200px;
+   opacity: 0.5;
+}
+.pizimg
+{
+    width:100px;
+    height:100px;
+}
+#web
+{
+    border: 1px solid black;
+    background-color: aquamarine;
+}
+#web tr th {
+    border: 1px solid black;
+}
+#web tr td {
+    border: 1px solid black;
+}
