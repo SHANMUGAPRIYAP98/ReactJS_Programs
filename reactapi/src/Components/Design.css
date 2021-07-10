@@ -1,19 +1,23 @@
 #f1
 {
-    margin-top: -600px;
-    margin-left: 750px;
-    color: aquamarine;
+
+    color: crimson;
+}
+#f2
+{
+    color:darkmagenta;
+}
+.t2
+{
+    color:darkred;
+    font-family: 'Segoe UI';
 }
 #t1
 {
-    color:aquamarine;
+    color:blue;
     font-family: 'Segoe UI';
 }
-img
-{
-    width:1500px;
-    height:800px;
-}
+
 #piz
 {
     border:1px solid black;

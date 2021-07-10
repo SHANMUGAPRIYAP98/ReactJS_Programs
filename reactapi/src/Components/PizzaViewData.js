@@ -21,7 +21,7 @@ export default function PizzaViewData() {
             }
         })
      }
-     var dbUrl="http://localhost:4000/orderForm";
+     var dbUrl="http://localhost:5000/orderForm";
      var id=val.search;
      var [res,setRes]=useState([])
      var [view,setView]=useState()

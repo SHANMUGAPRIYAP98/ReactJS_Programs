@@ -29,6 +29,12 @@ export default function WebinarFormAPI() {
     useEffect(() => {
         axios.get("http://localhost:4000/States").then(res => res.data).then((data) => {
             setState(data)
+        }).catch((err)=>
+        {
+            console.log(err)
+        }).finally(()=>
+        {
+            console.log("I am in Finally Block")
         })
     }, [])
     var disCities,dis;
@@ -137,8 +143,13 @@ export default function WebinarFormAPI() {
 
             console.log("Form Submitted Successfully");
             console.log(data)
-        }
-        )
+        }).catch((err)=>
+        {
+            console.log(err)
+        }).finally(()=>
+        {
+            console.log("I am in Finally Block")
+        })
     }
     var display;
     var [print,setPrint]=useState()
@@ -165,9 +176,10 @@ export default function WebinarFormAPI() {
         setPrint(display)
     }
     var id=data.eid;
-    const onDataUpdate=($)=>
+    const onDataUpdate=()=>
     {
-        axios.put(`${dbUrl}/${id}`,data).then(res=>console.log(res))
+        console.log(data)
+         axios.put(`${dbUrl}/${id}`,data).then(res=>console.log(res))
 
     }
 

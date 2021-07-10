@@ -58,12 +58,12 @@ export default function PizzaOrderForm() {
     }, [])
     var display;
     if (paym === "Credit Card") {
-        display = <div><table><tbody><tr><td>Credit Card Number/Debit Card Number : </td>
+        display = <div><table class="t2"><tbody><tr><td>Credit Card Number/Debit Card Number : </td>
             <td><input type="text" name="num" value={data.num} onChange={OnTextChange} maxLength="16" /></td></tr>
             <tr><td>CVV Number : </td><td><input type="password" name="cvv" value={data.cvv} onChange={OnTextChange} maxLength="3" /></td></tr></tbody></table></div>
     }
     else if (paym === "Debit Card") {
-        display = <div><table><tbody><tr><td>Credit Card Number/Debit Card Number : </td>
+        display = <div><table class="t2"><tbody><tr><td>Credit Card Number/Debit Card Number : </td>
             <td><input type="text" name="num" value={data.num} onChange={OnTextChange} maxLength="16" /></td></tr>
             <tr><td>CVV Number : </td><td><input type="password" name="cvv" value={data.cvv} onChange={OnTextChange} maxLength="3" /></td></tr></tbody></table></div>
     }
@@ -96,7 +96,7 @@ export default function PizzaOrderForm() {
         cCost = 0;
         data.cost = cCost + sCost;
     }
-    var postUrl="http://localhost:4000/orderForm";
+    var postUrl="http://localhost:5000/orderForm";
     function onSubmitForm() {
         const response = {
             method: "Post",
@@ -122,7 +122,6 @@ export default function PizzaOrderForm() {
     }
     return (
         <div>
-            <img src={pizza1} />
             <fieldset id="f1">
                 <legend>Pizza Order Form</legend>
                 <table id="t1">
@@ -147,7 +146,7 @@ export default function PizzaOrderForm() {
                                 }
                             </select>
                         </td></tr>
-                        <tr><td>Toppings : </td>
+                        <tr><td>Toppings (Free of Cost) : </td>
                             {
                                 toppings.map((top) => {
                                     return (
@@ -155,7 +154,8 @@ export default function PizzaOrderForm() {
                                 })
                             }
                         </tr>
-                        <tr><td>Payment : </td><td>
+                        <fieldset id="f2"><legend>Payment</legend>
+                        <tr><td style={{color:'darkred'}}>Payment : </td><td>
                             <select name="paymt" onChange={onChangePay}>
                                 <option value="0">Select Payment</option>
                                 {
@@ -171,7 +171,9 @@ export default function PizzaOrderForm() {
                         {
                             display
                         }
+                        </fieldset>
                         <tr><td>Cost : </td><td><input type="number" name="cost" onChange={OnTextChange} value={data.cost} /> </td></tr>
+                        
                         <tr><td><button type="submit" onClick={onSubmitForm}>Order Pizza</button></td></tr>
                     </tbody>
                 </table>
