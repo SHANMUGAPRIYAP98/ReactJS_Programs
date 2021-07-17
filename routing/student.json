@@ -1,0 +1,39 @@
+{
+  "students": [
+    {
+      "regno": "3",
+      "sname": "sandhya",
+      "mail": "san@gmail.com",
+      "addr": "madhavaram",
+      "phone": "9831245678",
+      "id": 3
+    },
+    {
+      "regno": "4",
+      "sname": "shanmuga priya",
+      "mail": "shan@gmail.com",
+      "addr": "kodungaiyur",
+      "phone": "9845555555",
+      "rb": "PG",
+      "id": 4
+    },
+    {
+      "regno": "1",
+      "sname": "diyashri nagaraj",
+      "mail": "diya@gmail.com",
+      "addr": "eeee",
+      "phone": "9812345678",
+      "rb": "PG",
+      "id": 1
+    },
+    {
+      "regno": "6",
+      "sname": "priya",
+      "mail": "priya@gmail.com",
+      "addr": "kk nagar",
+      "phone": "9812345678",
+      "rb": "PG",
+      "id": 5
+    }
+  ]
+}
